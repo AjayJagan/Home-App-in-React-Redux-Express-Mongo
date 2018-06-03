@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { handleFieldChange } from '../actions/loginAction';
+import { handleFieldChange, onSubmitForm } from '../actions/loginAction';
 import loginPage from '../components/loginPage';
 
 const mapStateToProps = (state) => ({

@@ -3,7 +3,7 @@ import axios from 'axios';
 export const types = {
   HANDLE_FIELD_CHANGE: 'HANDLE_FIELD_CHANGE',
   SUBMITTED_FORM : 'SUBMITTED_FORM',
-  SUBMIT_FAILED: 'SUBMIT_FAILED',
+  //SUBMIT_FAILED: 'SUBMIT_FAILED',
 };
 
 export const handleFieldChange = (name, value) => ({
@@ -23,8 +23,8 @@ export const onSubmitForm = (firstName, lastName, email, password, phone) => {
     dispatch({
       type: types.SUBMITTED_FORM,
       payload: {
-        response: response.data,
-      };
+        response: response.data
+      }
     });
     // dispatch({
     //   type: types.TOAST,
