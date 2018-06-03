@@ -4,10 +4,10 @@ const initialState = {
   firstName: '',
   lastName: '',
   email: '',
-  pwd: '',
-  phNo: '',
-  successMessage: '',
-  failureMessage:'',
+  password: '',
+  phone: '',
+  // successMessage: '',
+  // failureMessage:'',
 };
 
 export default function loginReducer(state = initialState, action) {

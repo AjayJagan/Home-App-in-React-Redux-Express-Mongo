@@ -17,7 +17,7 @@ export default class LoginPage extends React.Component{
     //   console.log(error)
     // });
 
-    this.props.onSubmitForm(this.props.login.firstName,this.props.login.lastName,this.props.login.email,this.props.login.pwd,this.props.login.phNo);
+    this.props.onSubmitForm(this.props.login.firstName,this.props.login.lastName,this.props.login.email,this.props.login.password,this.props.login.phone);
   }
 
 
@@ -54,11 +54,11 @@ export default class LoginPage extends React.Component{
   </div>
   <div className="form-group">
     <label>Password:</label>
-    <input type="password" className="form-control" id="pwd" placeholder="Enter password" name="pwd" onChange={this.handleChange("password")}/>
+    <input type="password" className="form-control" id="pwd" placeholder="Enter password" name="password" onChange={this.handleChange("password")}/>
   </div>
   <div className="form-group">
     <label>Phone Number:</label>
-    <input type="number" className="form-control" id="phNo" placeholder="EnterYour Phone Number" name="phNo" onChange={this.handleChange("phone")}/>
+    <input type="number" className="form-control" id="phNo" placeholder="EnterYour Phone Number" name="phone" onChange={this.handleChange("phone")}/>
   </div>
 <input  type="button" className="btn btn-success" value="  Sign Up  " onClick={()=>this.onSubmitForm()} />
 </form>
