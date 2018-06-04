@@ -6,6 +6,8 @@ const initialState = {
   email: '',
   password: '',
   phone: '',
+  open: false,
+  message:'',
   // successMessage: '',
   // failureMessage:'',
 };
@@ -16,6 +18,23 @@ export default function loginReducer(state = initialState, action) {
       return {
           ...state,
           [action.payload.name]: action.payload.value,
+      };
+    case types.SUBMITTED_FORM :
+      return {
+        ...state,
+        open: true,
+        message:'Successfully Logged In',
+      };
+    case types.SNACK_CLOSE:
+      return{
+        ...state,
+        open: false,
+      };
+    case types.SUBMIT_FAILED:
+      return {
+        ...state,
+        open: true,
+        message:'SignUp Failure'
       };
 
     default:

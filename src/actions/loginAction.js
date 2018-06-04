@@ -3,7 +3,8 @@ import axios from 'axios';
 export const types = {
   HANDLE_FIELD_CHANGE: 'HANDLE_FIELD_CHANGE',
   SUBMITTED_FORM : 'SUBMITTED_FORM',
-  //SUBMIT_FAILED: 'SUBMIT_FAILED',
+  SNACK_CLOSE :'SNACK_CLOSE',
+  SUBMIT_FAILED: 'SUBMIT_FAILED',
 };
 
 export const handleFieldChange = (name, value) => ({
@@ -15,6 +16,7 @@ export const handleFieldChange = (name, value) => ({
 });
 
 export const onSubmitForm = (firstName, lastName, email, password, phone) => {
+
   const payload = {
       firstName, lastName, email, password, phone,
   };
@@ -26,15 +28,13 @@ export const onSubmitForm = (firstName, lastName, email, password, phone) => {
         response: response.data
       }
     });
-    // dispatch({
-    //   type: types.TOAST,
-    //   payload: {
-    //       msg: 'Successfully added',
-    //   }
-    // })
     return response.data;
   }).catch(() => dispatch({type: types.SUBMIT_FAILED}));
 };
+
+export const snackClose = () => ({
+  type: types.SNACK_CLOSE,
+});
 
 // function thunk(action, next, dispatch) {
 //   if (typeof action === 'object') {

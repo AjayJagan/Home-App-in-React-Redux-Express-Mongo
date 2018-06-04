@@ -1,7 +1,7 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import { handleFieldChange, onSubmitForm } from '../actions/loginAction';
+import { handleFieldChange, onSubmitForm, snackClose } from '../actions/loginAction';
 import loginPage from '../components/loginPage';
 
 const mapStateToProps = (state) => ({
@@ -9,6 +9,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
+  snackClose:snackClose,
   onSubmitForm: onSubmitForm,
   handleFieldChange: handleFieldChange
 }, dispatch);
