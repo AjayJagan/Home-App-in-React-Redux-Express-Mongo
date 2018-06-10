@@ -28,7 +28,7 @@ export const handleSignIn = (email, password) => {
                     type: types.HANDLE_SIGN_IN_ERROR_EMAIL,
                     payload: {
                         msg: response.data.msg,
-                    }   
+                    }
                 });
             }
             else if (response.data.type === "password") {

@@ -8,7 +8,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({
-  snackClose:snackClose,
+  snackClose: snackClose,
   onSubmitForm: onSubmitForm,
   handleFieldChange: handleFieldChange
 }, dispatch);

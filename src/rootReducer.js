@@ -6,6 +6,6 @@ import userDashboardReducer from './reducers/userDashboardReducer';
 export default combineReducers({
     login: loginReducer,
     signIn: signInReducer,
-    userDashboard:userDashboardReducer,
+    userDashboard: userDashboardReducer,
 
 });

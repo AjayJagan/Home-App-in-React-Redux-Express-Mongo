@@ -1,18 +1,18 @@
 import { types } from '../actions/signInAction';
-import {types as types2} from '../actions/userDashboardAction'
+import { types as types2 } from '../actions/userDashboardAction'
 import { validateEmail } from './signInReducerHelpers';
 
 const initialState = {
     email: '',
     password: '',
-    emailError:'',
-    passwordError:'',
+    emailError: '',
+    passwordError: '',
     authenticated: false,
     token: '',
 }
 
 export default function signInReducer(state = initialState, action) {
-   
+
     switch (action.type) {
         case types.HANDLE_TEXT_CHANGE:
             return {
@@ -27,10 +27,10 @@ export default function signInReducer(state = initialState, action) {
                 token: action.payload.token,
             };
         case types2.LOGOUT_ACTION:
-        return{
-            ...state,
-            authenticated:false,
-        }
+            return {
+                ...state,
+                authenticated: false,
+            }
         default: return state;
     }
 }

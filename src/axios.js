@@ -8,7 +8,7 @@ instance.interceptors.request.use(function (config) {
     var user = require('./store').default.getState().signIn;
     if (user.authenticated) {
         config.headers['Authorization'] = user.token;
-        console.log("this is the user token"+user.token);
+        console.log("this is the user token" + user.token);
     }
     return config;
 }, function (error) {

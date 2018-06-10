@@ -10,7 +10,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => bindActionCreators(
     {
-    handleLogout:handleLogout,
+        handleLogout: handleLogout,
     }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(userDashboard);

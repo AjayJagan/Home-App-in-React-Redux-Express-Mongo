@@ -2,8 +2,8 @@ import axios from '../axios';
 
 export const types = {
   HANDLE_FIELD_CHANGE: 'HANDLE_FIELD_CHANGE',
-  SUBMITTED_FORM : 'SUBMITTED_FORM',
-  SNACK_CLOSE :'SNACK_CLOSE',
+  SUBMITTED_FORM: 'SUBMITTED_FORM',
+  SNACK_CLOSE: 'SNACK_CLOSE',
   SUBMIT_FAILED: 'SUBMIT_FAILED',
 };
 
@@ -18,7 +18,7 @@ export const handleFieldChange = (name, value) => ({
 export const onSubmitForm = (firstName, lastName, email, password, phone) => {
 
   const payload = {
-      firstName, lastName, email, password, phone,
+    firstName, lastName, email, password, phone,
   };
 
   return (dispatch) => axios.post('user/add', payload).then(response => {
@@ -29,7 +29,7 @@ export const onSubmitForm = (firstName, lastName, email, password, phone) => {
       }
     });
     return response.data;
-  }).catch(() => dispatch({type: types.SUBMIT_FAILED}));
+  }).catch(() => dispatch({ type: types.SUBMIT_FAILED }));
 };
 
 export const snackClose = () => ({

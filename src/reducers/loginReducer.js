@@ -2,7 +2,7 @@ import { types } from '../actions/loginAction';
 
 const initialState = {
   firstName: '',
-  lastName: '', 
+  lastName: '',
   email: '',
   password: '',
   phone: '',
