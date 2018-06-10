@@ -1,6 +1,5 @@
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-
 import { handleFieldChange, onSubmitForm, snackClose } from '../actions/loginAction';
 import loginPage from '../components/loginPage';
 

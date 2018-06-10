@@ -6,6 +6,12 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
+  devServer: {
+    port: 8080,
+    historyApiFallback: {
+      index: './src/index.html'
+    }
+  },
   module: {
     rules: [
       {

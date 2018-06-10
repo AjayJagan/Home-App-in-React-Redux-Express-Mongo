@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from '../axios';
 
 export const types = {
   HANDLE_FIELD_CHANGE: 'HANDLE_FIELD_CHANGE',
@@ -21,7 +21,7 @@ export const onSubmitForm = (firstName, lastName, email, password, phone) => {
       firstName, lastName, email, password, phone,
   };
 
-  return (dispatch) => axios.post('http://localhost:3000/user/add', payload).then(response => {
+  return (dispatch) => axios.post('user/add', payload).then(response => {
     dispatch({
       type: types.SUBMITTED_FORM,
       payload: {
@@ -36,6 +36,7 @@ export const snackClose = () => ({
   type: types.SNACK_CLOSE,
 });
 
+// how thunx works:
 // function thunk(action, next, dispatch) {
 //   if (typeof action === 'object') {
 //     next(action); // reducers

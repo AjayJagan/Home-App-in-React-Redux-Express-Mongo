@@ -2,31 +2,29 @@ import { types } from '../actions/loginAction';
 
 const initialState = {
   firstName: '',
-  lastName: '',
+  lastName: '', 
   email: '',
   password: '',
   phone: '',
   open: false,
-  message:'',
-  // successMessage: '',
-  // failureMessage:'',
+  message: '',
 };
 
 export default function loginReducer(state = initialState, action) {
   switch (action.type) {
     case types.HANDLE_FIELD_CHANGE:
       return {
-          ...state,
-          [action.payload.name]: action.payload.value,
+        ...state,
+        [action.payload.name]: action.payload.value,
       };
-    case types.SUBMITTED_FORM :
+    case types.SUBMITTED_FORM:
       return {
         ...state,
         open: true,
-        message:'Successfully Logged In',
+        message: 'Successfully Logged In',
       };
     case types.SNACK_CLOSE:
-      return{
+      return {
         ...state,
         open: false,
       };
@@ -34,7 +32,7 @@ export default function loginReducer(state = initialState, action) {
       return {
         ...state,
         open: true,
-        message:'SignUp Failure'
+        message: 'SignUp Failure'
       };
 
     default:

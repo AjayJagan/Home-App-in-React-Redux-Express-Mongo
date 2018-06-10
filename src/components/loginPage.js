@@ -6,7 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-//import axios from 'axios';
+
 
 const bg = require('../images/bg.jpg');
 
@@ -150,60 +150,4 @@ class LoginPage extends React.Component {
   }
 
 };
-//     <form>
-//     <div className="form-group">
-//       <label>First Name:</label>
-//       <input
-//         type="textbox"
-//         className="form-control"
-//         id="firstName"
-//         placeholder="Enter the First Name"
-//         name="firstName"
-//         onChange={this.handleChange("firstName")}
-//         value={this.props.login.firstName}
-//       />
-//     </div>
-//     <div className="form-group">
-//       <label>Last Name:</label>
-//       <input
-//         type="textbox"
-//         className="form-control"
-//         id="lastName"
-//         placeholder="Enter the Last Name"
-//         name="lastName"
-//         onChange={this.handleChange("lastName")}
-//         value={this.props.login.lastName}
-//       />
-//     </div>
-//   <div className="form-group">
-//     <label>Email:</label>
-//     <input type="email" className="form-control" id="email" placeholder="Enter email" name="email" onChange={this.handleChange("email")}/>
-//   </div>
-//   <div className="form-group">
-//     <label>Password:</label>
-//     <input type="password" className="form-control" id="pwd" placeholder="Enter password" name="password" onChange={this.handleChange("password")}/>
-//   </div>
-//   <div className="form-group">
-//     <label>Phone Number:</label>
-//     <input type="number" className="form-control" id="phNo" placeholder="EnterYour Phone Number" name="phone" onChange={this.handleChange("phone")}/>
-//   </div>
-// <input  type="button" className="btn btn-success" value="  Sign Up  " onClick={()=>this.onSubmitForm()} />
-// <Snackbar
-//     anchorOrigin={{
-//       vertical: 'bottom',
-//       horizontal: 'left',
-//     }}
-//     open={this.props.login.open}
-//     autoHideDuration={2000}
-//     onClose={()=>this.handleClose()}
-//     ContentProps={{
-//       'aria-describedby': 'message-id',
-//     }}
-//     message={<span id="message-id">Data saved Successfully</span>}
-//   />
-//
-//  </form>
-
-
-
 export default withStyles(styles)(LoginPage);
